@@ -65,6 +65,7 @@
     [super viewDidLoad];
     self.backButton.enabled = NO;
     self.forwardButton.enabled = NO;
+    self.myURLTextField.text = @"enter web address here";
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -88,6 +89,7 @@
     self.backButton.enabled = self.myWebView.canGoBack;
     self.forwardButton.enabled = self.myWebView.canGoForward;
     self.myURLTextField.text = self.myWebView.request.URL.absoluteString;
+    //self.navigationI = self.myWebView.request.URL.absoluteString;
 }
 
 @end
